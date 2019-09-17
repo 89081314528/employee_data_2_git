@@ -20,10 +20,10 @@ public class Main {
                 new Employee("Денис", "Силяков", "Владимирович", 30000),
         };
         String[] settings = new String[]{
-                "name",
+//                "name",
                 "surname",
 //                "patronymic",
-                "salary"
+//                "salary"
         };
         report("newReport.csv", employees, 20000, settings);
     }
