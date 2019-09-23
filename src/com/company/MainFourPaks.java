@@ -28,39 +28,37 @@ public class MainFourPaks {
         return false;
     }
 
-    public static void reportPaks(String fileName, EmployeePaks[] employeePakses, String[] settings, int salary) throws FileNotFoundException {
+    public static void reportPaks(String fileName, EmployeePaks[] employeePakses, String[] settings, int minSalary) throws FileNotFoundException {
         PrintStream preanter = new PrintStream(new File(fileName));
-        for (int i = 0; i < settings.length; i++) {
-            if (settings[i].equals("name")) {
+            if (findWordInMassiveSettings("name", settings)) {
                 preanter.print("name;");
             }
-            if (settings[i].equals("surname")) {
+            if (findWordInMassiveSettings("surname", settings)) {
                 preanter.print("surname;");
             }
-            if (settings[i].equals("patronymic")) {
+            if (findWordInMassiveSettings("patronymic", settings)) {
                 preanter.print("patronymic;");
             }
-            if (settings[i].equals("salary")) {
+            if (findWordInMassiveSettings("salary", settings)) {
                 preanter.print("salary;");
             }
-        }
         preanter.println();
         for (int i = 0; i < employeePakses.length; i++) {
             EmployeePaks employeePaks = employeePakses[i];
-            for (int y = 0; y < settings.length; y++) {
-                if (settings[y].equals("name")) {
+            if (employeePaks.getSalary() > minSalary) {
+                if (findWordInMassiveSettings("name", settings)) {
                     preanter.print(employeePaks.getName());
                     preanter.print(";");
                 }
-                if (settings[y].equals("surname")) {
+                if (findWordInMassiveSettings("surname", settings)) {
                     preanter.print(employeePaks.getSurname());
                     preanter.print(";");
                 }
-                if (settings[y].equals("patronymic")) {
+                if (findWordInMassiveSettings("patronymic", settings)) {
                     preanter.print(employeePaks.getPatronymic());
                     preanter.print(";");
                 }
-                if (settings[y].equals("salary")) {
+                if (findWordInMassiveSettings("salary", settings)) {
                     preanter.print(employeePaks.getSalary());
                     preanter.print(";");
                 }
