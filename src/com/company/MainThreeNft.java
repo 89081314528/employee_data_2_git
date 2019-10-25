@@ -11,7 +11,7 @@ import java.io.PrintStream;
  * создать метод, который запишет в файл с заданным именем в зависимости от настроек и зарплаты
  */
 
-public class MainThree {
+public class MainThreeNft {
     public static void main(String[] args) throws FileNotFoundException {
         EmployeeNft[] employeeNfts = new EmployeeNft[] {
                 new EmployeeNft("Тимур", "Забиров", 120000),

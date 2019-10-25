@@ -1,12 +1,12 @@
 package com.company;
 
-public class EmployeePaks {
-    private final String name;
-    private final String surname;
-    private final String patronymic;
-    private final int salary;
+public class EmployeeNftPlus {
+        private final String name;
+        private final String surname;
+        private final String patronymic;
+        private final int salary;
 
-    public EmployeePaks(String name, String surname, String patronymic, int salary) {
+    public EmployeeNftPlus(String name, String surname, String patronymic, int salary) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
